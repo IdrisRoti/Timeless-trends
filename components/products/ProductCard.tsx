@@ -11,15 +11,13 @@ export type ProductType = {
   color: string;
   instock: number;
   name: string;
+  quantity: number 
 };
 
 export default function ProductCard({ product }: { product: ProductType }) {
-  const { cart, setCart } = useContext(CartContext);
-
-  const handleAddToCart = (productData: ProductType) => {
-    console.log(productData, cart);
-  };
-
+  const { cart, addToCart } = useContext(CartContext);
+  
+  
   return (
     <article
       className="grid-cols-subgrid"
@@ -34,7 +32,7 @@ export default function ProductCard({ product }: { product: ProductType }) {
       </div>
       <h2 className="font-bold text-lg line-clamp-1">{product.name}</h2>
       <button
-      onClick={()=> handleAddToCart(product)}
+      onClick={()=> addToCart(product)}
         className="p-[0.625rem] text-center bg-black font-medium w-full text-white mt-9 hover:opacity-60 transition duration-500"
       >
         ADD TO CART
