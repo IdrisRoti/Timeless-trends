@@ -1,18 +1,13 @@
 'use client';
 
-import CartContext from '@/context/CartContext';
-import { useContext } from 'react';
+import CartItems from '@/components/cart/CartItems';
 
 export default function page() {
-  const { cart } = useContext(CartContext);
 
   return (
-    <div className='flex flex-col justify-center items-center h-screen'>
-      {cart.map((cartItem) => (
-        <div>
-          {cartItem.name} {cartItem.quantity}
-        </div>
-      ))}
+    <div className="mt-[9rem] max-w-[1440px] mx-auto px-9">
+      <h1 className="text-black text-4xl font-semibold">Shopping Cart</h1>
+      <CartItems />
     </div>
   );
 }
