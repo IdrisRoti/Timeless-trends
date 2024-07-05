@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CartContext from './CartContext';
 import { ProductType } from '@/components/products/ProductCard';
 
@@ -12,6 +12,13 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
       : [];
 
   const [cart, setCart] = useState<ProductType[] | []>(cartFromLocalStorage);
+
+//To fix hydration error caused by localStorage
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const addToCart = (product: ProductType) => {
     let updatedCart;
@@ -75,13 +82,17 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
       localStorage.setItem('cart', JSON.stringify(updatedCart));
     }
   };
-  
-//   const getCartTotal = ()=>{
-//     const total = cart.reduce((acc, currValue)=>{return acc + currValue.quantity * currValue.price}, 0)
-//     return total;
-//   }
-  
+
+  //   const getCartTotal = ()=>{
+  //     const total = cart.reduce((acc, currValue)=>{return acc + currValue.quantity * currValue.price}, 0)
+  //     return total;
+  //   }
+
   console.log('CART: ', cart);
+
+  if (!isMounted) {
+    return <></>;
+  }
 
   return (
     <CartContext.Provider
