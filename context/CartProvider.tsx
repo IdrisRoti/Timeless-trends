@@ -21,7 +21,7 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
     if (inCart) {
       updatedCart = cart.map((cartItem) =>
         cartItem.id === product.id
-          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          ? { ...cartItem, quantity: cartItem.quantity! + 1 }
           : cartItem
       );
       setCart(updatedCart);
@@ -51,7 +51,7 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
     if (itemInCart) {
       updatedCart = cart.map((cartItem) =>
         cartItem.id === id
-          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          ? { ...cartItem, quantity: cartItem.quantity! + 1 }
           : cartItem
       );
       setCart(updatedCart);
@@ -67,7 +67,7 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
         cartItem.id === id
           ? {
               ...cartItem,
-              quantity: cartItem.quantity > 0 ? cartItem.quantity - 1 : 1,
+              quantity: cartItem.quantity! > 0 ? cartItem.quantity! - 1 : 1,
             }
           : cartItem
       );
