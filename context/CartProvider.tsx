@@ -46,7 +46,7 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
     setCart(updatedCart);
     localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
-
+  
   const clearCart = () => {
     setCart([]);
     localStorage.removeItem('cart');
@@ -74,7 +74,7 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
         cartItem.id === id
           ? {
               ...cartItem,
-              quantity: cartItem.quantity! > 0 ? cartItem.quantity! - 1 : 1,
+              quantity: cartItem.quantity! > 1 ? cartItem.quantity! - 1 : 1,
             }
           : cartItem
       );
