@@ -7,7 +7,7 @@ export const productsData = [
                 image: "/tshirt1.png",
                 subcat: "Vintage Tee",
                 color: "#576AA4",
-                instock: 58,
+                price: 58,
                 name: "Basic slim T-shirt"
             },
             {
@@ -15,7 +15,7 @@ export const productsData = [
                 image: "/tshirt2.png",
                 subcat: "Vintage Tee",
                 color: "#141414",
-                instock: 58,
+                price: 58,
                 name: "Basic slim T-shirt"
             },
             {
@@ -23,7 +23,7 @@ export const productsData = [
                 image: "/tshirt3.png",
                 subcat: "Vintage Tee",
                 color: "#C39D6C",
-                instock: 58,
+                price: 58,
                 name: "Basic slim T-shirt"
             },
             {
@@ -31,7 +31,7 @@ export const productsData = [
                 image: "/tshirt4.png",
                 subcat: "Vintage Tee",
                 color: "#30302E",
-                instock: 58,
+                price: 58,
                 name: "Basic slim T-shirt"
             },
         ]
@@ -44,7 +44,7 @@ export const productsData = [
                 image: "/patchwork.png",
                 subcat: "Patchwork tee",
                 color: "#2F2E2A",
-                instock: 58,
+                price: 58,
                 name: "Basic Patchwork T-shirt"
             },
             {
@@ -52,7 +52,7 @@ export const productsData = [
                 image: "/blackair.png",
                 subcat: "Blackair tee",
                 color: "#DCDFE8",
-                instock: 58,
+                price: 58,
                 name: "Basic Blackair T-shirt"
             },
             {
@@ -60,7 +60,7 @@ export const productsData = [
                 image: "/eastern.png",
                 subcat: "Eastern V",
                 color: "#30302E",
-                instock: 58,
+                price: 58,
                 name: "Eastern V up and down"
             },
             {
@@ -68,7 +68,7 @@ export const productsData = [
                 image: "/skinko.png",
                 subcat: "Skinko jacket",
                 color: "#E1D9CB",
-                instock: 58,
+                price: 58,
                 name: "Casual skinko jacket"
             },
         ]
@@ -81,7 +81,7 @@ export const productsData = [
                 image: "/patchwork.png",
                 subcat: "Patchwork tee",
                 color: "#2F2E2A",
-                instock: 58,
+                price: 58,
                 name: "Basic Patchwork T-shirt"
             },
             {
@@ -89,7 +89,7 @@ export const productsData = [
                 image: "/blackair.png",
                 subcat: "Blackair tee",
                 color: "#DCDFE8",
-                instock: 58,
+                price: 58,
                 name: "Basic Blackair T-shirt"
             },
             {
@@ -97,7 +97,7 @@ export const productsData = [
                 image: "/eastern.png",
                 subcat: "Eastern V",
                 color: "#30302E",
-                instock: 58,
+                price: 58,
                 name: "Eastern V up and down"
             },
             {
@@ -105,7 +105,7 @@ export const productsData = [
                 image: "/skinko.png",
                 subcat: "Skinko jacket",
                 color: "#E1D9CB",
-                instock: 58,
+                price: 58,
                 name: "Casual skinko jacket"
             },
         ]
