@@ -1,6 +1,5 @@
 import CartItems from '@/components/cart/CartItems';
 import OrderSummary from '@/components/cart/OrderSummary';
-import ContinueShoppingBtn from '@/components/ContinueShoppingBtn';
 
 export default function Checkout() {
   return (

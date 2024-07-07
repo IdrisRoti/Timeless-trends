@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import CartProvider from "@/context/CartProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -11,7 +10,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Timeless Trends",
-  description: "Timeless Trends",
+  description: "Single seller fashion store",
 };
 
 export default function RootLayout({
@@ -22,10 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <CartProvider>
           <Navbar />
           {children}
-        </CartProvider>
       </body>
     </html>
   );

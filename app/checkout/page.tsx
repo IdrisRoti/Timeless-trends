@@ -1,6 +1,5 @@
 import CartItems from '@/components/cart/CartItems';
 import PaymentInfo from '@/components/checkout/PaymentInfo';
-import ContinueShoppingBtn from '@/components/ContinueShoppingBtn';
 
 export default function page() {
   return (
