@@ -33,7 +33,7 @@ export default function PaymentInfo() {
         <p className='color-[#333] ml-6 mb-3 text-sm sm:text-base md:text-lg'>
           Cardholder Name
         </p>
-        <div className='px-20 mb-4'>
+        <div className='mb-4 px-6'>
           <input className='h-10 w-full p-2' type='text' value='Jackson Eddy' />
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function PaymentInfo() {
         <p className='color-[#333] ml-6 mb-3 text-sm sm:text-base md:text-lg'>
           Cardholder Number
         </p>
-        <div className='px-20 mb-4'>
+        <div className='px-6 mb-4'>
           <input
             className='h-10 w-full p-2'
             type='text'
@@ -51,13 +51,13 @@ export default function PaymentInfo() {
         </div>
       </div>
       
-      <div className='flex items-center px-6 justify-between gap-4 md:gap-12'>
+      <div className='flex items-center px-6 justify-between gap-4 md:gap-8'>
         {/* expiration date */}
         <div className='flex flex-col w-full'>
           <label className='color-[#333] mb-3 text-sm sm:text-base md:text-lg'>
             Expiration Date
           </label>
-          <div className='pl-14'>
+          <div className=''>
             <input className='h-10 p-2 block' type='text' value='12/07/26' />
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function PaymentInfo() {
         <div className='flex flex-col'>
           <label className='mb-3 text-sm sm:text-base md:text-lg'>CVV</label>
 
-          <div className='pr-14'>
+          <div className=''>
             <input className='h-10 p-2 block w-full' type='text' value='456' />
           </div>
         </div>
