@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function OrderSummary() {
   return (
-    <section className='md:col-span-4 bg-[#E5E6EA] max-h-fit pb-6'>
+    <section className='md:col-span-4 bg-[#E5E6EA] max-h-fit pb-2'>
       <h2 className='font-semibold pt-4 pb-2.5 px-5 text-4xl'>Order Summary</h2>
       <div className='bg-black/30 h-[1px]' />
       {/* total price */}
