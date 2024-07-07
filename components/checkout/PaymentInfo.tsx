@@ -53,7 +53,7 @@ export default function PaymentInfo() {
       
       <div className='flex items-center px-6 justify-between gap-4 md:gap-8'>
         {/* expiration date */}
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col'>
           <label className='color-[#333] mb-3 text-sm sm:text-base md:text-lg'>
             Expiration Date
           </label>
