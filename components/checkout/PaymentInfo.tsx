@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function PaymentInfo() {
   return (
-    <section className='md:col-span-4 bg-[#E5E6EA] max-h-fit'>
+    <section className='md:col-span-4 bg-[#E5E6EA] max-h-fit  pb-6'>
       <h2 className='font-semibold pt-4 pb-2.5 px-5 text-4xl text-[#333]'>
         Payment Info
       </h2>
@@ -50,7 +50,7 @@ export default function PaymentInfo() {
           <p className='color-[#333] ml-6 mb-3 text-lg'>Expiration Date</p>{' '}
           <label className='mr-[5.8rem]'>CVV</label>
         </div>
-        <div className='ml-20 mr-14 mb-4 flex justify-between'>
+        <div className='pl-20 pr-14 mb-4 flex justify-between gap-2'>
           <input
             className='h-10 w-[8.5rem] p-2 block'
             type='text'

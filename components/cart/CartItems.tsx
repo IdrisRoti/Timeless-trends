@@ -17,7 +17,7 @@ export default function CartItems({isCart}:{isCart?:boolean}) {
                 <article className='flex items-center py-3 px-2'>
                   {/* check icon */}
                   <Image
-                    className='bg-black mr-2 md:mr-14'
+                    className='hidden lg:block bg-black mr-2 md:mr-14'
                     width={16}
                     height={16}
                     src='/check.png'
@@ -35,15 +35,15 @@ export default function CartItems({isCart}:{isCart?:boolean}) {
                     </div>
                   </div>
                   {/* product details */}
-                  <div className='mr-6 md:mr-14'>
+                  <div className='mr-2 md:mr-14'>
                     <p className='mb-2 text-xs md:text-base'>
                       {cartItem.subcat}
                     </p>
-                    <h2 className='text-lg md:text-[0.57rem] font-bold mb-2.5 md:mb-5'>
+                    <h2 className='text-sm md:text-[0.57rem] font-bold mb-2.5 md:mb-5'>
                       {cartItem.name}
                     </h2>
                     <button
-                      className='text-[#E21A1A] md:text-base'
+                      className='text-[#E21A1A] md:text-base text-sm'
                     >
                       Remove
                     </button>
@@ -65,11 +65,11 @@ export default function CartItems({isCart}:{isCart?:boolean}) {
                     </div>
                   </div>
                   {/* product price */}
-                  <div className='ml-6 md:ml-[6.5rem] font-semibold md:text-base'>
+                  <div className='ml-4 md:ml-[6.5rem] text-sm lg:text-base font-semibold md:text-base'>
                     $58.90
                   </div>
                   {/* product price * quantity  total */}
-                  <div className={`${isCart ? "hidden md:block" : "block"} ml-10 md:ml-[6.5rem] font-semibold`}>$58.90</div>
+                  <div className={`${isCart ? "hidden md:block" : "block"} text-sm lg:text-base ml-4 md:ml-[6.5rem] font-semibold`}>$58.90</div>
                 </article>
                 <div className='bg-black/30 h-[1px]' />
               </div>
