@@ -1,14 +1,12 @@
 import Image from "next/image";
-import { useContext } from "react";
 
 export type ProductType = {
   id: number;
   image: string;
   subcat: string;
   color: string;
-  instock: number;
+  price: number;
   name: string;
-  quantity?: number 
 };
 
 export default function ProductCard({ product }: { product: ProductType }) {
@@ -22,7 +20,7 @@ export default function ProductCard({ product }: { product: ProductType }) {
       <div className="flex text-sm md:text-base items-start gap-[0.625rem] py-3">
         <p>{product.subcat}</p>
         <div className="w-4 h-4" style={{ background: product.color }} />
-        <span className="font-medium text-sm">${product.instock}</span>
+        <span className="font-medium text-sm">${product.price}</span>
       </div>
       <h2 className="font-bold md:text-lg line-clamp-2">{product.name}</h2>
       <button
