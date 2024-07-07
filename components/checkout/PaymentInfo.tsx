@@ -58,7 +58,7 @@ export default function PaymentInfo() {
             Expiration Date
           </label>
           <div className=''>
-            <input className='h-10 p-2 block' type='text' value='12/07/26' />
+            <input className='h-10 p-2' type='text' value='12/07/26' />
           </div>
         </div>
         {/* CVV */}
@@ -66,7 +66,7 @@ export default function PaymentInfo() {
           <label className='mb-3 text-sm sm:text-base md:text-lg'>CVV</label>
 
           <div className=''>
-            <input className='h-10 p-2 block w-full' type='text' value='456' />
+            <input className='h-10 p-2 w-full' type='text' value='456' />
           </div>
         </div>
       </div>
