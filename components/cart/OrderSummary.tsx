@@ -7,20 +7,20 @@ export default function OrderSummary() {
       <div className='bg-black/30 h-[1px]' />
       {/* total price */}
       <div className='lg:w-[19rem] w-[80%] mx-auto flex py-4 px-5 items-center justify-between'>
-        <p className='text-[#333] text-lg'>Total</p>
+        <p className='text-[#333] text-sm sm:text-base md:text-lg'>Total</p>
         <span className='font-semibold'>$58</span>
       </div>
       <div className='bg-black/30 h-[1px]' />
       {/* delivery fee */}
       <div className='lg:w-[19rem] w-[80%] mx-auto flex py-4 px-5 items-center justify-between'>
-        <p className='text-[#333] text-lg'>Delivery fee</p>
+        <p className='text-[#333] text-sm sm:text-base md:text-lg'>Delivery fee</p>
         <span className='font-semibold'>$5</span>
       </div>
       <div className='bg-black/30 h-[1px]' />
       {/* shipping info */}
       <div className='px-10 mt-7 mb-6'>
         <h2 className='text-2xl font-bold mb-4'>Shipping info</h2>
-        <p className='text-lg h-[11.65rem] max-lg:max-w-[60%] max-md:max-w-[80%] max-sm:max-w-[100%]'>
+        <p className='text-sm sm:text-base md:text-lg h-[11.65rem] max-lg:max-w-[60%] max-md:max-w-[80%] max-sm:max-w-[100%]'>
           Modern shipping containers revolutionized the global trade industry.
           Introduced in the 1950s, these standardized containers drastically
           reduced shipping times and costs
