@@ -57,13 +57,13 @@ export default function PaymentInfo() {
           <label className='color-[#333] mb-3 text-sm sm:text-base md:text-lg'>
             Expiration Date
           </label>
-            <input className='h-10 p-2 w-[10rem]' type='text' value='12/07/26' />
+            <input className='h-10 p-2 w-[6rem] md:w-auto' type='text' value='12/07/26' />
         </div>
         {/* CVV */}
         <div className='flex flex-col'>
           <label className='mb-3 text-sm sm:text-base md:text-lg'>CVV</label>
             
-            <input className='h-10 p-2 w-[10rem]' type='text' value='456' />
+            <input className='h-10 p-2 w-[6rem] md:w-auto' type='text' value='456' />
         </div>
       </div>
       <div className='bg-black/30 h-[1px] mt-[4.5rem]' />
