@@ -9,9 +9,11 @@ export default function PaymentInfo() {
       </h2>
       <div className='bg-black/30 h-[1px]' />
       {/* card type */}
-      <p className='mt-3 ml-5 mb-2 text-lg'>Card Type</p>
+      <p className='mt-3 ml-5 mb-2 text-sm sm:text-base md:text-lg'>
+        Card Type
+      </p>
       <div className='ml-6 flex items-center justify-center sm:justify-start lg:justify-center gap-8 mb-[4.7rem]'>
-        <div className='w-[3.15rem] aspect-square bg-white border border-black/30 flex items-center justify-center'>
+        <div className='cursor-pointer transition duration-500 hover:border-black w-[3.15rem] aspect-square bg-white border border-black/30 flex items-center justify-center'>
           <Image
             src='/mastercard.png'
             width={30}
@@ -28,45 +30,49 @@ export default function PaymentInfo() {
       </div>
       {/* card name */}
       <div>
-        <p className='color-[#333] ml-6 mb-3 text-lg'>Cardholder Name</p>
-        <div className='ml-20 mr-14 mb-4'>
-          <input className='h-10 w-full p-2' type='text' value='Jackson Eddy' />
+        <p className='color-[#333] ml-6 mb-3 text-sm sm:text-base md:text-lg'>
+          Cardholder Name
+        </p>
+        <div className='mb-4 px-6'>
+          <input className='h-10 w-full p-2' type='text' />
         </div>
       </div>
       {/* card number */}
       <div>
-        <p className='color-[#333] ml-6 mb-3 text-lg'>Cardholder Number</p>
-        <div className='ml-20 mr-14 mb-4'>
+        <p className='color-[#333] ml-6 mb-3 text-sm sm:text-base md:text-lg'>
+          Cardholder Number
+        </p>
+        <div className='px-6 mb-4'>
           <input
             className='h-10 w-full p-2'
             type='text'
-            value='1111 2222 1431 1431'
           />
         </div>
       </div>
-      {/* expiration date */}
-      <div>
-        <div className='flex justify-between'>
-          <p className='color-[#333] ml-6 mb-3 text-lg'>Expiration Date</p>{' '}
-          <label className='mr-[5.8rem]'>CVV</label>
+      
+      <div className='flex items-center px-6 justify-between gap-4 md:gap-8'>
+        {/* expiration date */}
+        <div className='flex flex-col'>
+          <label className='color-[#333] mb-3 text-sm sm:text-base md:text-lg'>
+            Expiration Date
+          </label>
+            <input className='h-10 p-2 w-[6rem] md:w-auto' type='text' />
         </div>
-        <div className='pl-20 pr-14 mb-4 flex justify-between gap-2'>
-          <input
-            className='h-10 w-[8.5rem] p-2 block'
-            type='text'
-            value='12/07/26'
-          />
-
-          <input
-            className='h-10 w-[8.5rem] p-2 block'
-            type='text'
-            value='456'
-          />
+        {/* CVV */}
+        <div className='flex flex-col'>
+          <label className='mb-3 text-sm sm:text-base md:text-lg'>CVV</label>
+            
+            <input className='h-10 p-2 w-[6rem] md:w-auto' type='text' />
         </div>
       </div>
       <div className='bg-black/30 h-[1px] mt-[4.5rem]' />
-      <div className="mt-5 mb-[1.88rem] px-4 w-full">
-        <Link href="/checkout" className="block font-medium text-lg text-center bg-black text-white uppercase w-full p-2.5">Pay $176.7</Link>
+      <div className='mt-5 mb-[1.88rem] px-4 w-full'>
+        <Link
+          href='/checkout'
+          className='block font-medium text-lg text-center bg-black text-white uppercase w-full p-2.5 hover:opacity-80 duration-500'
+        >
+          Pay $176.7
+        </Link>
       </div>
     </section>
   );
