@@ -13,7 +13,7 @@ export default function PaymentInfo() {
         Card Type
       </p>
       <div className='ml-6 flex items-center justify-center sm:justify-start lg:justify-center gap-8 mb-[4.7rem]'>
-        <div className='w-[3.15rem] aspect-square bg-white border border-black/30 flex items-center justify-center'>
+        <div className='cursor-pointer transition duration-500 hover:border-black w-[3.15rem] aspect-square bg-white border border-black/30 flex items-center justify-center'>
           <Image
             src='/mastercard.png'
             width={30}
@@ -34,7 +34,7 @@ export default function PaymentInfo() {
           Cardholder Name
         </p>
         <div className='mb-4 px-6'>
-          <input className='h-10 w-full p-2' type='text' value='Jackson Eddy' />
+          <input className='h-10 w-full p-2' type='text' />
         </div>
       </div>
       {/* card number */}
@@ -46,7 +46,6 @@ export default function PaymentInfo() {
           <input
             className='h-10 w-full p-2'
             type='text'
-            value='1111 2222 1431 1431'
           />
         </div>
       </div>
@@ -57,20 +56,20 @@ export default function PaymentInfo() {
           <label className='color-[#333] mb-3 text-sm sm:text-base md:text-lg'>
             Expiration Date
           </label>
-            <input className='h-10 p-2 w-[6rem] md:w-auto' type='text' value='12/07/26' />
+            <input className='h-10 p-2 w-[6rem] md:w-auto' type='text' />
         </div>
         {/* CVV */}
         <div className='flex flex-col'>
           <label className='mb-3 text-sm sm:text-base md:text-lg'>CVV</label>
             
-            <input className='h-10 p-2 w-[6rem] md:w-auto' type='text' value='456' />
+            <input className='h-10 p-2 w-[6rem] md:w-auto' type='text' />
         </div>
       </div>
       <div className='bg-black/30 h-[1px] mt-[4.5rem]' />
       <div className='mt-5 mb-[1.88rem] px-4 w-full'>
         <Link
           href='/checkout'
-          className='block font-medium text-lg text-center bg-black text-white uppercase w-full p-2.5'
+          className='block font-medium text-lg text-center bg-black text-white uppercase w-full p-2.5 hover:opacity-80 duration-500'
         >
           Pay $176.7
         </Link>

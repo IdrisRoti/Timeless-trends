@@ -15,12 +15,9 @@ export default function CartItems({ isCart }: { isCart?: boolean }) {
             <div key={i} className='mb-9'>
               <article className='flex items-center py-3 px-2'>
                 {/* check icon */}
-                <Image
-                  className='hidden lg:block bg-black mr-2 md:mr-14'
-                  width={16}
-                  height={16}
-                  src='/check.png'
-                  alt='checkbox'
+                <input
+                  className='hidden lg:block bg-black mr-2 md:mr-14 w-4 h-4 cursor-pointer'
+                  type='checkbox'
                 />
                 {/* product image */}
                 <div className='  px-3.5 md:px-7 py-2.5 md:py-5 border border-black/40 bg-white mr-2 md:mr-3.5 '>
@@ -39,11 +36,15 @@ export default function CartItems({ isCart }: { isCart?: boolean }) {
                   <h2 className='text-sm md:text-lg font-bold mb-2.5 md:mb-5'>
                     {cartItem.name}
                   </h2>
-                  <button className='text-[#E21A1A] md:text-base text-sm'>
+                  <button className='text-[#E21A1A] md:text-base text-sm hover:opacity-80 transition duration-500'>
                     Remove
                   </button>
                 </div>
-                <div className={`${isCart && "ml-auto flex flex-col lg:flex-row max-lg:gap-4"}`}>
+                <div
+                  className={`${
+                    isCart && 'ml-auto flex flex-col lg:flex-row max-lg:gap-4'
+                  }`}
+                >
                   {/* increase and decrease buttons */}
                   <div
                     className={`gap-2 ${
