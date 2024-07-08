@@ -7,6 +7,7 @@ export type ProductType = {
   color: string;
   price: number;
   name: string;
+  quantity?: number;
 };
 
 export default function ProductCard({ product }: { product: ProductType }) {
