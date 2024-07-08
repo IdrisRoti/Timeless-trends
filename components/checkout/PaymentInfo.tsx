@@ -1,7 +1,18 @@
+"use client"
+
+import CartContext from '@/context/CartContext';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useContext } from 'react';
 
 export default function PaymentInfo() {
+  const { cart } = useContext(CartContext);
+
+  const total = cart.reduce((acc, currValue) => {
+    const totalPrice= acc + currValue.quantity! * currValue.price;
+    return totalPrice + 5;
+  }, 0);
+
   return (
     <section className='md:col-span-4 bg-[#E5E6EA] max-h-fit  pb-2'>
       <h2 className='font-semibold pt-4 pb-2.5 px-5 text-4xl text-[#333]'>
@@ -71,7 +82,7 @@ export default function PaymentInfo() {
           href='/checkout'
           className='block font-medium text-lg text-center bg-black text-white uppercase w-full p-2.5 hover:opacity-80 duration-500'
         >
-          Pay $176.7
+          Pay $ {total.toFixed(2)}
         </Link>
       </div>
     </section>

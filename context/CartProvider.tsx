@@ -83,11 +83,6 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
-  //   const getCartTotal = ()=>{
-  //     const total = cart.reduce((acc, currValue)=>{return acc + currValue.quantity * currValue.price}, 0)
-  //     return total;
-  //   }
-
   console.log('CART: ', cart);
 
   if (!isMounted) {

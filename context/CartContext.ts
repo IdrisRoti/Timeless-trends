@@ -17,6 +17,7 @@ const CartContext = createContext<CartContextType>({
   clearCart: () => null,
   increaseQty: () => null,
   decreaseQty: () => null,
+
 });
 
 export default CartContext;

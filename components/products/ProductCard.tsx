@@ -1,4 +1,8 @@
+"use client"
+
+import CartContext from "@/context/CartContext";
 import Image from "next/image";
+import { useContext } from "react";
 
 export type ProductType = {
   id: number;
@@ -11,6 +15,7 @@ export type ProductType = {
 };
 
 export default function ProductCard({ product }: { product: ProductType }) {
+  const {addToCart} = useContext(CartContext)
   return (
     <article
       className="grid-cols-subgrid"
@@ -25,6 +30,7 @@ export default function ProductCard({ product }: { product: ProductType }) {
       </div>
       <h2 className="font-bold md:text-lg line-clamp-2">{product.name}</h2>
       <button
+      onClick={()=>addToCart(product)}
         className="p-[0.625rem] text-center bg-black font-medium w-full text-white mt-9 hover:opacity-60 transition duration-500"
       >
         ADD TO CART
