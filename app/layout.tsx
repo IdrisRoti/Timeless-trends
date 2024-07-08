@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import CartProvider from "@/context/CartProvider";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <CartProvider>
       <Navbar />
       {children}
+      <Toaster />
       </CartProvider>
       </body>
     </html>

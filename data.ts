@@ -8,7 +8,7 @@ export const productsData = [
                 subcat: "Vintage Tee",
                 color: "#576AA4",
                 price: 58,
-                name: "Basic slim T-shirt"
+                name: "Basic slim T-shirt",
             },
             {
                 id: 2,
@@ -16,7 +16,7 @@ export const productsData = [
                 subcat: "Vintage Tee",
                 color: "#141414",
                 price: 58,
-                name: "Basic slim T-shirt"
+                name: "Black slim T-shirt"
             },
             {
                 id: 3,
@@ -24,7 +24,7 @@ export const productsData = [
                 subcat: "Vintage Tee",
                 color: "#C39D6C",
                 price: 58,
-                name: "Basic slim T-shirt"
+                name: "Brown slim T-shirt"
             },
             {
                 id: 4,
@@ -32,7 +32,7 @@ export const productsData = [
                 subcat: "Vintage Tee",
                 color: "#30302E",
                 price: 58,
-                name: "Basic slim T-shirt"
+                name: "Grey slim T-shirt"
             },
         ]
     },
@@ -78,35 +78,35 @@ export const productsData = [
         products: [
             {
                 id: 9,
-                image: "/patchwork.png",
-                subcat: "Patchwork tee",
+                image: "/Basic Racing T-shirt.png",
+                subcat: "Basic Racing",
                 color: "#2F2E2A",
                 price: 58,
-                name: "Basic Patchwork T-shirt"
+                name: "Basic Racing T-shirt"
             },
             {
                 id: 10,
-                image: "/blackair.png",
-                subcat: "Blackair tee",
+                image: "/Basic Washed T-shirt.png",
+                subcat: "Basic Washed",
                 color: "#DCDFE8",
                 price: 58,
-                name: "Basic Blackair T-shirt"
+                name: "Basic Washed T-shirt"
             },
             {
                 id: 11,
-                image: "/eastern.png",
-                subcat: "Eastern V",
+                image: "/Mo 1 Puffer Jacket.png",
+                subcat: "Mo 1 puffer",
                 color: "#30302E",
                 price: 58,
-                name: "Eastern V up and down"
+                name: "Mo 1 Puffer Jacket"
             },
             {
                 id: 12,
-                image: "/skinko.png",
-                subcat: "Skinko jacket",
+                image: "/Casual Skinko Jacket.png",
+                subcat: "Gauel jacket",
                 color: "#E1D9CB",
                 price: 58,
-                name: "Casual skinko jacket"
+                name: "Gauel skinko jacket"
             },
         ]
     },

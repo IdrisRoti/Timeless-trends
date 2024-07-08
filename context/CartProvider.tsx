@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import CartContext from './CartContext';
 import { ProductType } from '@/components/products/ProductCard';
+import toast from 'react-hot-toast';
 
 const CartProvider = ({ children }: { children: React.ReactNode }) => {
   // get cart from localStorage if present
@@ -34,10 +35,11 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
       setCart(updatedCart);
       localStorage.setItem('cart', JSON.stringify(updatedCart));
     } else {
-      updatedCart = [...cart, { ...product, quantity: 1 }];
+      updatedCart = [...cart, { ...product, quantity: 1, incart: true, checkout: true }];
       setCart(updatedCart);
       localStorage.setItem('cart', JSON.stringify(updatedCart));
     }
+    toast.success("Product added to cart")
   };
 
   const removeFromCart = (id: number) => {
@@ -45,6 +47,7 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
     updatedCart = cart.filter((cartItem) => cartItem.id != id);
     setCart(updatedCart);
     localStorage.setItem('cart', JSON.stringify(updatedCart));
+    toast.success("Product removed from cart")
   };
   
   const clearCart = () => {
@@ -82,7 +85,7 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
       localStorage.setItem('cart', JSON.stringify(updatedCart));
     }
   };
-
+  
   console.log('CART: ', cart);
 
   if (!isMounted) {
@@ -98,6 +101,7 @@ const CartProvider = ({ children }: { children: React.ReactNode }) => {
         clearCart,
         increaseQty,
         decreaseQty,
+        
       }}
     >
       {children}
