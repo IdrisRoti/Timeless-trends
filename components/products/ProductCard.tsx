@@ -33,7 +33,7 @@ export default function ProductCard({ product }: { product: ProductType }) {
         <span className='font-medium text-sm'>${product.price}</span>
       </div>
       <h2 className='font-bold md:text-lg line-clamp-2'>{product.name}</h2></Link>
-
+      
       {incart ? (
         <Link
           href='/cart'
