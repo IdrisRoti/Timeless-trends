@@ -23,6 +23,7 @@ export default function ProductCard({ product }: { product: ProductType }) {
 
   return (
     <article className='grid-cols-subgrid'>
+      <Link href={`/product/${product.id}`}>
       <div className='bg-[#F0F1F6] w-full aspect-square flex justify-center items-center border border-black/30 shadow-sm'>
         <Image src={product.image} alt='' width={130} height={173} />
       </div>
@@ -31,7 +32,7 @@ export default function ProductCard({ product }: { product: ProductType }) {
         <div className='w-4 h-4' style={{ background: product.color }} />
         <span className='font-medium text-sm'>${product.price}</span>
       </div>
-      <h2 className='font-bold md:text-lg line-clamp-2'>{product.name}</h2>
+      <h2 className='font-bold md:text-lg line-clamp-2'>{product.name}</h2></Link>
 
       {incart ? (
         <Link
