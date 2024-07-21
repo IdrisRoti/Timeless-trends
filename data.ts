@@ -37,7 +37,7 @@ export const productsData = [
         ]
     },
     {
-        category: "Casual fits",
+        category: "Casual Fits",
         products: [
             {
                 id: 5,
